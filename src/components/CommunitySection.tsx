@@ -170,10 +170,13 @@ export const CommunitySection: React.FC = () => {
               <ShoppingBag className="w-5 h-5" />
             </div>
             <h3 className="font-semibold text-lg text-[#e5e1e4] mb-2">
-              Tienda Oficial Online
+              1. Tienda Oficial Online
+            </h3>
+            <h3 className="font-semibold text-lg text-[#e5e1e4] mb-2">
+              2. Academia de Desarrollo
             </h3>
             <p className="text-xs text-[#c8c4d5] leading-relaxed mb-4">
-              Visita nuestra tienda para adquirir módulos de hardware, componentes para prototipos y sensores certificados.
+              Visita nuestra tienda y academia  para adquirir componentes de hardware y , componentes para prototipos y sensores certificados.
             </p>
           </div>
 
@@ -185,6 +188,15 @@ export const CommunitySection: React.FC = () => {
               className="w-full py-2.5 px-3 bg-[#c5c0ff] text-[#281590] rounded text-xs font-mono-tech font-semibold uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center gap-2 text-center"
             >
               <span>component.aewhitedevs.com</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="https://drenepiedra.github.io/AcademyLearn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-2.5 px-3 bg-[#c5c0ff] text-[#281590] rounded text-xs font-mono-tech font-semibold uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center gap-2 text-center"
+            >
+              <span className="">https://drenepiedra.github.io/AcademyLearn/</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
 
