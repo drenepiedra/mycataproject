@@ -22,10 +22,10 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, onClose }) => {
             </div>
             <div>
               <h3 className="font-semibold text-lg text-[#e5e1e4]">
-                {type === 'terms' ? 'Terms of Hardware & Protocol Service' : 'Feline Data Privacy Policy'}
+                {type === 'terms' ? 'Términos de Servicio y Garantía de Hardware' : 'Política de Privacidad y Protección de Datos'}
               </h3>
               <p className="text-xs font-mono-tech text-[#928f9e]">
-                MYCATPROJECT OPEN SPECIFICATION &amp; BIO-TELEMETRY CHARTER
+                MYCATPROJECT • COMPONENTES &amp; INGENIERÍA TECNOLÓGICA
               </p>
             </div>
           </div>
@@ -41,32 +41,32 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, onClose }) => {
         <div className="p-6 overflow-y-auto space-y-4 text-xs text-[#c8c4d5] leading-relaxed">
           {type === 'terms' ? (
             <>
-              <h4 className="text-sm font-semibold text-[#c5c0ff]">1. Engineering &amp; Hardware Deployment</h4>
+              <h4 className="text-sm font-semibold text-[#c5c0ff]">1. Calidad de Componentes e Integración</h4>
               <p>
-                All hardware schematics, firmware binaries, and CAD files provided by mycatproject are licensed for both open-source educational tinkering and commercial device integration under the Apache-2.0 and CERN-OHL-P hardware licenses.
+                Todos los componentes y módulos provistos a través de nuestra plataforma y tienda oficial (component.awwhitedevs.com) cuentan con verificación de funcionamiento y especificaciones técnicas oficiales para desarrollo de prototipos y producción.
               </p>
-              <h4 className="text-sm font-semibold text-[#c5c0ff]">2. Animal Safety &amp; Whisker Clearance Mandate</h4>
+              <h4 className="text-sm font-semibold text-[#c5c0ff]">2. Seguridad y Estándares Técnicos</h4>
               <p>
-                Any physical feeder, wearable collar, or robotic accessory manufactured using mycatproject specifications must strictly satisfy the <em>ISO-23849 Feline Whisker-Clearance</em> and <em>UL 2900-2</em> acoustic noise threshold (&lt;18 dB) to guarantee zero stress induction in household felines.
+                Nuestros diseños y proyectos de hardware implementan protecciones de sobretensión, bajo consumo energético y aislamiento seguro para operar de manera confiable en entornos domésticos e industriales.
               </p>
-              <h4 className="text-sm font-semibold text-[#c5c0ff]">3. Mesh Protocol Participation</h4>
+              <h4 className="text-sm font-semibold text-[#c5c0ff]">3. Propiedad Intelectual y Soporte</h4>
               <p>
-                Collar nodes operating on the sub-GHz or Bluetooth mesh network transmit encrypted, anonymized metabolic telemetry. You retain full ownership and localized sovereignty over your cat's health data.
+                Brindamos soporte técnico directo sobre nuestros productos y servicios a medida, respetando la confidencialidad y requerimientos específicos de cada cliente.
               </p>
             </>
           ) : (
             <>
-              <h4 className="text-sm font-semibold text-[#c5c0ff]">1. Local-First Feline Biometric Data</h4>
+              <h4 className="text-sm font-semibold text-[#c5c0ff]">1. Tratamiento de Información Personal</h4>
               <p>
-                All continuous eating crunch audio data, IMU acceleration vectors, and litter box weight metrics are processed on-device (Edge TinyML). Raw audio or video never leaves your local mesh gateway without explicit hardware token approval.
+                Los datos de contacto provistos a través de nuestro formulario o correo electrónico se utilizan exclusivamente para responder a tus consultas comerciales y prestar los servicios técnicos solicitados.
               </p>
-              <h4 className="text-sm font-semibold text-[#c5c0ff]">2. GPS &amp; Spatial Privacy</h4>
+              <h4 className="text-sm font-semibold text-[#c5c0ff]">2. Privacidad y Seguridad</h4>
               <p>
-                Feline territory coordinates are encrypted with localized zero-knowledge public keys. Cloud relays only observe cryptographic heartbeat confirmations, preventing tracking of private home perimeters.
+                No compartimos, vendemos ni cedemos datos personales a terceros. Toda comunicación se gestiona bajo estrictos criterios de confidencialidad y buenas prácticas de seguridad informática.
               </p>
-              <h4 className="text-sm font-semibold text-[#c5c0ff]">3. Veterinary Research Contribution</h4>
+              <h4 className="text-sm font-semibold text-[#c5c0ff]">3. Contacto Directo</h4>
               <p>
-                Users may opt-in to donate anonymized hydration and renal risk profiles to open-source veterinary universities to advance feline longevity research globally.
+                Para cualquier solicitud relacionada con tus datos o proyectos, puedes comunicarte directamente al correo electrónico oficial: drenepiedra@gmail.com.
               </p>
             </>
           )}
@@ -77,7 +77,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, onClose }) => {
             onClick={onClose}
             className="px-5 py-2 rounded bg-[#c5c0ff] text-[#281590] font-semibold text-xs font-mono-tech hover:brightness-110 transition-all"
           >
-            I Understand &amp; Agree
+            Entendido y Aceptar
           </button>
         </div>
       </div>

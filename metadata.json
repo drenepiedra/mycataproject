@@ -1,6 +1,6 @@
 {
   "name": "mycatproject",
-  "description": "Engineering the Future of Feline Tech - The premier platform for high-tech cat innovations and hardware solutions.",
+  "description": "Plataforma especializada en ingeniería de hardware, soluciones IoT y tecnología de vanguardia.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

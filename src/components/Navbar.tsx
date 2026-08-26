@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Activity } from 'lucide-react';
+import { Menu, X, ShoppingBag } from 'lucide-react';
 import { OriginalCatLogo } from './OriginalCatLogo';
 
 interface NavbarProps {
-  onOpenConnect: () => void;
-  onOpenTelemetry: () => void;
   onNavigate: (sectionId: string) => void;
   activeSection: string;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
-  onOpenConnect,
-  onOpenTelemetry,
   onNavigate,
   activeSection,
 }) => {
@@ -27,10 +23,10 @@ export const Navbar: React.FC<NavbarProps> = ({
   }, []);
 
   const navLinks = [
-    { id: 'about', label: 'About' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'services', label: 'Services' },
-    { id: 'community', label: 'Community' },
+    { id: 'about', label: 'Quiénes Somos' },
+    { id: 'projects', label: 'Tienda & Proyectos' },
+    { id: 'services', label: 'Servicios' },
+    { id: 'community', label: 'Contacto' },
   ];
 
   const handleLinkClick = (id: string) => {
@@ -60,7 +56,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </button>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex gap-10 items-center">
+        <nav className="hidden md:flex gap-8 items-center">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -78,39 +74,35 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
             );
           })}
+
+          {/* Direct Store Link */}
+          <a
+            href="https://component.awwhitedevs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-[#c5c0ff]/10 hover:bg-[#c5c0ff]/20 text-[#c5c0ff] border border-[#c5c0ff]/30 text-xs font-mono-tech transition-all"
+          >
+            <ShoppingBag className="w-3.5 h-3.5" />
+            <span>Tienda Online</span>
+          </a>
         </nav>
 
-        {/* Right Action Area */}
-        <div className="flex items-center gap-3">
-          {/* Live Telemetry Pulse indicator */}
-          <button
-            id="nav-telemetry-btn"
-            onClick={onOpenTelemetry}
-            title="Open Live Feline Telemetry Feed"
-            className="hidden sm:flex items-center gap-2 px-2.5 py-1.5 rounded bg-[#201f21] border border-white/10 hover:border-[#c5c0ff]/40 text-[#c8c4d5] hover:text-[#c5c0ff] text-xs transition-all font-mono-tech"
+        {/* Mobile menu trigger */}
+        <div className="md:hidden flex items-center gap-3">
+          <a
+            href="https://component.awwhitedevs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 px-2.5 py-1 rounded bg-[#c5c0ff]/10 text-[#c5c0ff] border border-[#c5c0ff]/30 text-[11px] font-mono-tech"
           >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#c5c0ff] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#c5c0ff]"></span>
-            </span>
-            <span className="hidden lg:inline">TELEMETRY</span>
-            <Activity className="w-3.5 h-3.5 text-[#c5c0ff]" />
-          </button>
+            <ShoppingBag className="w-3 h-3" />
+            <span>Tienda</span>
+          </a>
 
-          {/* Connect button */}
-          <button
-            id="nav-connect-btn"
-            onClick={onOpenConnect}
-            className="bg-[#c5c0ff] text-[#281590] font-semibold text-xs tracking-wider uppercase px-5 py-2.5 rounded cyber-glow hover:brightness-110 active:scale-[0.98] transition-all shadow-[0_0_15px_rgba(197,192,255,0.15)]"
-          >
-            Connect
-          </button>
-
-          {/* Mobile menu trigger */}
           <button
             id="mobile-menu-toggle-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-[#c8c4d5] hover:text-[#c5c0ff] p-2 focus:outline-none"
+            className="text-[#c8c4d5] hover:text-[#c5c0ff] p-2 focus:outline-none"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -130,17 +122,16 @@ export const Navbar: React.FC<NavbarProps> = ({
               {link.label}
             </button>
           ))}
-          <div className="pt-2 border-t border-white/10 flex items-center justify-between">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenTelemetry();
-              }}
+          <div className="pt-2 border-t border-white/10">
+            <a
+              href="https://component.awwhitedevs.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-xs font-mono-tech text-[#c5c0ff] py-1"
             >
-              <Activity className="w-4 h-4" />
-              Live Telemetry Stream
-            </button>
+              <ShoppingBag className="w-4 h-4" />
+              Visitar Tienda Oficial (component.awwhitedevs.com)
+            </a>
           </div>
         </div>
       )}

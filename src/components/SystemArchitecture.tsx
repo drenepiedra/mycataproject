@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
-import { Cpu, ChevronDown, ChevronUp, Radio, ShieldCheck, Zap } from 'lucide-react';
+import { Award, ChevronDown, ChevronUp, Cpu, HeartHandshake, ShieldCheck, Sparkles, Zap } from 'lucide-react';
 
 export const SystemArchitecture: React.FC = () => {
-  const [showDeepArchitecture, setShowDeepArchitecture] = useState(false);
+  const [showReasons, setShowReasons] = useState(false);
 
-  const architectureLayers = [
+  const valueProps = [
     {
-      layer: 'Layer 01 — Biological & Behavioral Sensing',
-      description: 'Micro-watt load cells, acoustic crunch spectrometers, and non-intrusive collar IMUs that respect feline whisker sensitivity and nocturnal sleep rhythms.',
-      icon: Radio,
+      title: '1. Ingeniería de Alta Precisión & Calidad',
+      description: 'Diseñamos cada componente y línea de código bajo estándares industriales de máxima fiabilidad. Cuidamos cada detalle técnico para garantizar rendimiento y durabilidad superior.',
+      icon: Award,
     },
     {
-      layer: 'Layer 02 — Embedded Edge Firmware',
-      description: 'Zero-jitter Rust/C firmware executing on low-power Nordic and ESP32 silicon with encrypted mesh sync and sub-millisecond local telemetry.',
+      title: '2. Soluciones a Medida & Escalables',
+      description: 'No creemos en soluciones genéricas. Estudiamos tus necesidades particulares y construimos arquitecturas modulares que evolucionan y crecen al ritmo de tus objetivos.',
       icon: Zap,
     },
     {
-      layer: 'Layer 03 — Feline Neural Inference',
-      description: 'TinyML on-device models predicting metabolic intake patterns, hydration dips, and spatial territory dynamics without sending raw video streams.',
+      title: '3. Ecosistema Tecnológico Completo',
+      description: 'Desde la concepción y prototipado rápido en hardware hasta el despliegue de firmware y software en la nube, cubrimos el ciclo completo sin intermediarios.',
       icon: Cpu,
     },
     {
-      layer: 'Layer 04 — Safe Habitat Integration',
-      description: 'Matter & Zigbee bridges that effortlessly sync feeder schedules, air purification, and perimeter safety directly with your existing smart home.',
-      icon: ShieldCheck,
+      title: '4. Trato Directo, Cercano & Transparente',
+      description: 'Trabajas directamente con ingenieros y desarrolladores apasionados. Respuestas rápidas, comunicación clara y soporte continuo en cada etapa del camino.',
+      icon: HeartHandshake,
     },
   ];
 
@@ -46,55 +46,64 @@ export const SystemArchitecture: React.FC = () => {
         </div>
 
         <div className="max-w-3xl relative z-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#c5c0ff]/10 border border-[#c5c0ff]/20 text-[#c5c0ff] text-xs font-mono-tech uppercase mb-4">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Nuestra Identidad &amp; Filosofía</span>
+          </div>
+
           <h2 className="font-semibold text-2xl sm:text-3xl md:text-[32px] text-[#c5c0ff] mb-6 tracking-tight">
-            System Architecture &amp; Biology
+            ¿Quiénes somos?
           </h2>
 
           <p className="text-[#c8c4d5] text-base sm:text-lg mb-4 leading-relaxed font-normal">
-            We are a specialized collective of hardware engineers, software developers, and feline behavioral
-            analysts. Our mission is to bridge the gap between advanced technology and fundamental cat needs.
+            Somos un equipo especializado de ingenieros de hardware, desarrolladores de software y apasionados de la innovación tecnológica. Nuestro objetivo principal es transformar ideas complejas en soluciones prácticas, confiables y de vanguardia.
+          </p>
+
+          <p className="text-[#c8c4d5] text-base sm:text-lg leading-relaxed font-normal mb-4">
+            Combinamos una sólida base en electrónica, sistemas embebidos de bajo consumo, automatización y desarrollo cloud para ofrecer productos y servicios que marcan la diferencia en el mercado actual.
           </p>
 
           <p className="text-[#c8c4d5] text-base sm:text-lg leading-relaxed font-normal">
-            By applying rigorous engineering principles to everyday feline challenges, we develop solutions
-            that are not only technologically sound but intrinsically aligned with natural behaviors.
+            Creemos firmemente en el código limpio, el hardware robusto y las relaciones duraderas con nuestros clientes y colaboradores.
           </p>
 
-          {/* Interactive Deep Architecture Toggle */}
+          {/* Interactive Desplegable con razones convincentes para elegirnos */}
           <div className="mt-8 pt-6 border-t border-white/10">
             <button
-              id="toggle-deep-architecture-btn"
-              onClick={() => setShowDeepArchitecture(!showDeepArchitecture)}
+              id="toggle-reasons-btn"
+              onClick={() => setShowReasons(!showReasons)}
               className="flex items-center gap-2 text-xs font-mono-tech uppercase tracking-wider text-[#c5c0ff] hover:text-white transition-colors group"
             >
-              <span>{showDeepArchitecture ? 'Hide Engineering Pipeline' : 'Inspect 4-Tier Architecture Pipeline'}</span>
-              {showDeepArchitecture ? (
+              <span>{showReasons ? 'Ocultar razones para elegirnos' : '¿Por qué elegirnos? Haz clic para ver nuestras ventajas'}</span>
+              {showReasons ? (
                 <ChevronUp className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
               ) : (
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
               )}
             </button>
 
-            {showDeepArchitecture && (
+            {showReasons && (
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 animate-fadeIn">
-                {architectureLayers.map((item, idx) => {
+                {valueProps.map((item, idx) => {
                   const Icon = item.icon;
                   return (
                     <div
                       key={idx}
-                      className="bg-[#201f21] border border-white/10 rounded p-4 cyber-glow flex flex-col justify-between"
+                      className="bg-[#201f21] border border-white/10 rounded p-5 cyber-glow flex flex-col justify-between hover:border-[#c5c0ff]/40 transition-colors"
                     >
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="p-2 rounded bg-[#353437] text-[#c5c0ff]">
-                          <Icon className="w-4 h-4" />
+                      <div>
+                        <div className="flex items-center gap-3 mb-2.5">
+                          <div className="p-2 rounded bg-[#353437] text-[#c5c0ff] shrink-0">
+                            <Icon className="w-4 h-4" />
+                          </div>
+                          <span className="font-mono-tech text-xs text-[#c5c0ff] font-semibold">
+                            {item.title}
+                          </span>
                         </div>
-                        <span className="font-mono-tech text-xs text-[#c5c0ff] font-semibold">
-                          {item.layer}
-                        </span>
+                        <p className="text-xs text-[#c8c4d5] leading-relaxed">
+                          {item.description}
+                        </p>
                       </div>
-                      <p className="text-xs text-[#c8c4d5] leading-relaxed">
-                        {item.description}
-                      </p>
                     </div>
                   );
                 })}

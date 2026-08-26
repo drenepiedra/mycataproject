@@ -6,22 +6,12 @@ import { ActiveDeployments } from './components/ActiveDeployments';
 import { CoreCompetencies } from './components/CoreCompetencies';
 import { CommunitySection } from './components/CommunitySection';
 import { Footer } from './components/Footer';
-import { ProjectDetailModal } from './components/ProjectDetailModal';
-import { DeveloperModal } from './components/DeveloperModal';
-import { ConnectModal } from './components/ConnectModal';
-import { LiveTelemetryDrawer } from './components/LiveTelemetryDrawer';
 import { LegalModal } from './components/LegalModal';
 import { AmbientPixelField } from './components/AmbientPixelField';
-import { DEPLOYMENTS_DATA, COMPETENCIES_DATA } from './data/deployments';
-import { Deployment } from './types';
+import { COMPETENCIES_DATA } from './data/deployments';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('hero');
-  const [selectedDeployment, setSelectedDeployment] = useState<Deployment | null>(null);
-  const [isDeveloperModalOpen, setIsDeveloperModalOpen] = useState(false);
-  const [isConnectModalOpen, setIsConnectModalOpen] = useState(false);
-  const [connectDefaultTopic, setConnectDefaultTopic] = useState('General Collaboration');
-  const [isTelemetryDrawerOpen, setIsTelemetryDrawerOpen] = useState(false);
   const [legalModalType, setLegalModalType] = useState<'terms' | 'privacy' | null>(null);
 
   const handleNavigate = (sectionId: string) => {
@@ -32,11 +22,6 @@ export default function App() {
     }
   };
 
-  const handleOpenConnectWithTopic = (topic: string) => {
-    setConnectDefaultTopic(topic);
-    setIsConnectModalOpen(true);
-  };
-
   return (
     <div className="bg-[#131315] text-[#e5e1e4] min-h-screen flex flex-col dot-bg relative selection:bg-[#c5c0ff] selection:text-[#281590] overflow-x-hidden">
       {/* Subtle Ambient Pixel Dispersal Across the Page */}
@@ -44,8 +29,6 @@ export default function App() {
 
       {/* Top Navbar */}
       <Navbar
-        onOpenConnect={() => handleOpenConnectWithTopic('General Collaboration')}
-        onOpenTelemetry={() => setIsTelemetryDrawerOpen(true)}
         onNavigate={handleNavigate}
         activeSection={activeSection}
       />
@@ -55,59 +38,32 @@ export default function App() {
         {/* Hero Section */}
         <Hero
           onExploreProjects={() => handleNavigate('projects')}
-          onDeveloperClick={() => setIsDeveloperModalOpen(true)}
+          onAboutClick={() => handleNavigate('about')}
         />
 
-        {/* System Architecture & Biology */}
+        {/* Sección: ¿Quiénes somos? */}
         <SystemArchitecture />
 
-        {/* Active Deployments */}
-        <ActiveDeployments
-          deployments={DEPLOYMENTS_DATA}
-          onSelectDeployment={(dept) => setSelectedDeployment(dept)}
-        />
+        {/* Sección: Tienda Online & Actividad (1 sola tarjeta ajustada con enlace a component.awwhitedevs.com) */}
+        <ActiveDeployments />
 
-        {/* Core Competencies */}
+        {/* Sección: Core Competencies / Servicios Especializados */}
         <CoreCompetencies
           competencies={COMPETENCIES_DATA}
-          onConsultationRequest={(title) => handleOpenConnectWithTopic(title)}
+          onContactClick={() => handleNavigate('community')}
         />
 
-        {/* Global Feline Mesh Community */}
-        <CommunitySection
-          onJoinDeveloperNetwork={() => setIsDeveloperModalOpen(true)}
-        />
+        {/* Sección: Contacto Directo con correo drenepiedra@gmail.com */}
+        <CommunitySection />
       </main>
 
-      {/* Footer */}
+      {/* Footer con fecha 2026 y Todos los derechos reservados */}
       <Footer
-        onOpenConnect={() => handleOpenConnectWithTopic('Developer Discord & Community')}
+        onNavigate={handleNavigate}
         onOpenLegal={(type) => setLegalModalType(type)}
       />
 
-      {/* Modals & Overlays */}
-      <ProjectDetailModal
-        deployment={selectedDeployment}
-        onClose={() => setSelectedDeployment(null)}
-        onOpenDeveloper={() => setIsDeveloperModalOpen(true)}
-      />
-
-      <DeveloperModal
-        isOpen={isDeveloperModalOpen}
-        onClose={() => setIsDeveloperModalOpen(false)}
-      />
-
-      <ConnectModal
-        isOpen={isConnectModalOpen}
-        onClose={() => setIsConnectModalOpen(false)}
-        defaultTopic={connectDefaultTopic}
-      />
-
-      <LiveTelemetryDrawer
-        isOpen={isTelemetryDrawerOpen}
-        onClose={() => setIsTelemetryDrawerOpen(false)}
-      />
-
+      {/* Modales Legales en Español */}
       <LegalModal
         type={legalModalType}
         onClose={() => setLegalModalType(null)}
