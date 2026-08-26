@@ -14,7 +14,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
           <div className="font-semibold text-2xl text-[#c5c0ff] mb-2 tracking-tight flex items-center gap-2">
             <span>mycatproject</span>
             <span className="text-[10px] font-mono-tech px-2 py-0.5 rounded bg-[#201f21] text-[#928f9e] border border-white/5">
-              EST. 2024 - 2026
+             2026
             </span>
           </div>
           <div className="font-mono-tech text-xs text-[#c8c4d5]/70 tracking-wider">
@@ -31,7 +31,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
             Quiénes Somos
           </button>
           <a
-            href="https://component.awwhitedevs.com"
+            href="https://component.aewhitedevs.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#c8c4d5] hover:text-[#c5c0ff] transition-colors"

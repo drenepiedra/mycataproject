@@ -43,11 +43,11 @@ export const Hero: React.FC<HeroProps> = ({
           className="space-y-4"
         >
           <h1 className="font-bold text-4xl sm:text-5xl md:text-[52px] text-[#c5c0ff] max-w-3xl leading-[1.1] tracking-[-0.02em] mx-auto">
-            Ingeniería &amp; Tecnología para Proyectos de Vanguardia
+            MyCat Project
           </h1>
 
           <p className="text-[#c8c4d5] text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed font-normal">
-            Plataforma especializada en diseño de hardware, soluciones IoT e inteligencia artificial aplicada. Calidad, precisión y soporte técnico dedicado.
+           Startup dedicada a facilitarte la vida
           </p>
         </motion.div>
 
@@ -69,7 +69,7 @@ export const Hero: React.FC<HeroProps> = ({
 
           <a
             id="hero-store-btn"
-            href="https://component.awwhitedevs.com"
+            href="https://component.aewhitedevs.com"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto min-w-[200px] bg-transparent text-[#c5c0ff] border border-[#c5c0ff] font-semibold text-xs tracking-wider uppercase px-8 py-3.5 rounded hover:bg-[#c5c0ff]/10 active:scale-[0.98] transition-all text-center flex items-center justify-center gap-2"
@@ -93,7 +93,7 @@ export const Hero: React.FC<HeroProps> = ({
           <div className="hidden sm:inline-block text-white/10">•</div>
           <div className="flex items-center gap-2">
             <Cpu className="w-3.5 h-3.5 text-[#c5c0ff]" />
-            <span>TIENDA: <strong className="text-[#e5e1e4]">COMPONENT.AWWHITEDEVS.COM</strong></span>
+            <span>TIENDA: <strong className="text-[#e5e1e4]">COMPONENT.aewhitedevs.COM</strong></span>
           </div>
           <div className="hidden sm:inline-block text-white/10">•</div>
           <div className="flex items-center gap-2">

@@ -179,12 +179,12 @@ export const CommunitySection: React.FC = () => {
 
           <div className="space-y-3">
             <a
-              href="https://component.awwhitedevs.com"
+              href="https://component.aewhitedevs.com"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-2.5 px-3 bg-[#c5c0ff] text-[#281590] rounded text-xs font-mono-tech font-semibold uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center gap-2 text-center"
             >
-              <span>component.awwhitedevs.com</span>
+              <span>component.aewhitedevs.com</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
 
@@ -193,7 +193,7 @@ export const CommunitySection: React.FC = () => {
                 Ubicación &amp; Despachos:
               </div>
               <p className="text-xs text-[#e5e1e4]">
-                Disponibilidad internacional y soporte en español.
+                California #17 / Regla y Caridad .rpto Modelo . mncipio Regla
               </p>
             </div>
           </div>

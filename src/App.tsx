@@ -44,7 +44,7 @@ export default function App() {
         {/* Sección: ¿Quiénes somos? */}
         <SystemArchitecture />
 
-        {/* Sección: Tienda Online & Actividad (1 sola tarjeta ajustada con enlace a component.awwhitedevs.com) */}
+        {/* Sección: Tienda Online & Actividad (1 sola tarjeta ajustada con enlace a component.aewhitedevs.com) */}
         <ActiveDeployments />
 
         {/* Sección: Core Competencies / Servicios Especializados */}

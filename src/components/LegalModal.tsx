@@ -43,7 +43,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, onClose }) => {
             <>
               <h4 className="text-sm font-semibold text-[#c5c0ff]">1. Calidad de Componentes e Integración</h4>
               <p>
-                Todos los componentes y módulos provistos a través de nuestra plataforma y tienda oficial (component.awwhitedevs.com) cuentan con verificación de funcionamiento y especificaciones técnicas oficiales para desarrollo de prototipos y producción.
+                Todos los componentes y módulos provistos a través de nuestra plataforma y tienda oficial (component.aewhitedevs.com) cuentan con verificación de funcionamiento y especificaciones técnicas oficiales para desarrollo de prototipos y producción.
               </p>
               <h4 className="text-sm font-semibold text-[#c5c0ff]">2. Seguridad y Estándares Técnicos</h4>
               <p>

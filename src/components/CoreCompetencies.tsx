@@ -33,7 +33,7 @@ export const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({
           Nuestros Servicios &amp; Especialidades
         </h2>
         <p className="text-sm font-mono-tech text-[#928f9e] mt-2">
-          DESARROLLO DE HARDWARE • IOT DE BAJO CONSUMO • INTELIGENCIA ARTIFICIAL &amp; SOFTWARE A MEDIDA
+          DESARROLLO DE SOFTWARE A MEDIDA • PRODUCTOS PERSONALIZADOS  
         </p>
       </div>
 

@@ -31,7 +31,7 @@ export const ActiveDeployments: React.FC = () => {
             </div>
 
             <span className="text-xs font-mono-tech text-[#928f9e]">
-              component.awwhitedevs.com
+              component.aewhitedevs.com
             </span>
           </div>
 
@@ -46,7 +46,7 @@ export const ActiveDeployments: React.FC = () => {
                   AWWhite Devs Component Store
                 </h4>
                 <p className="text-xs font-mono-tech text-[#c5c0ff]">
-                  https://component.awwhitedevs.com
+                  https://component.aewhitedevs.com
                 </p>
               </div>
             </div>
@@ -57,22 +57,22 @@ export const ActiveDeployments: React.FC = () => {
 
           {/* Title & Description */}
           <h3 className="font-semibold text-2xl text-[#e5e1e4] mb-3 group-hover:text-[#c5c0ff] transition-colors">
-            Tienda Oficial de Componentes, Módulos &amp; Hardware
+            Tienda Oficial de Componentes y Hardware
           </h3>
 
           <p className="text-base text-[#c8c4d5] leading-relaxed mb-6 font-normal">
-            Explora nuestro catálogo en línea con microcontroladores de alto rendimiento, sensores de precisión, módulos de comunicación inalámbrica y piezas electrónicas diseñadas para proyectos de ingeniería exigentes.
+            Explora nuestro catálogo en línea con productos de calidad , tenemos los mejores coponentes del mercado y los mejores precios par usted.
           </p>
 
           {/* Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 font-mono-tech text-xs text-[#c8c4d5]">
             <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5">
               <CheckCircle2 className="w-4 h-4 text-[#c5c0ff] shrink-0" />
-              <span>Stock verificado en tiempo real</span>
+              <span>Stock verificado </span>
             </div>
             <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5">
               <CheckCircle2 className="w-4 h-4 text-[#c5c0ff] shrink-0" />
-              <span>Documentación y pinouts incluidos</span>
+              <span>Soporte directo atención personalizada</span>
             </div>
             <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5">
               <CheckCircle2 className="w-4 h-4 text-[#c5c0ff] shrink-0" />
@@ -80,7 +80,7 @@ export const ActiveDeployments: React.FC = () => {
             </div>
             <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5">
               <CheckCircle2 className="w-4 h-4 text-[#c5c0ff] shrink-0" />
-              <span>Envíos rápidos y soporte directo</span>
+              <span>Envíos rápidos </span>
             </div>
           </div>
 
@@ -92,7 +92,7 @@ export const ActiveDeployments: React.FC = () => {
             </div>
 
             <a
-              href="https://component.awwhitedevs.com"
+              href="https://component.aewhitedevs.com"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-6 py-3 bg-[#c5c0ff] text-[#281590] rounded font-semibold text-xs font-mono-tech uppercase tracking-wider hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(197,192,255,0.2)]"

@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Direct Store Link */}
           <a
-            href="https://component.awwhitedevs.com"
+            href="https://component.aewhitedevs.com"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-[#c5c0ff]/10 hover:bg-[#c5c0ff]/20 text-[#c5c0ff] border border-[#c5c0ff]/30 text-xs font-mono-tech transition-all"
@@ -90,7 +90,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Mobile menu trigger */}
         <div className="md:hidden flex items-center gap-3">
           <a
-            href="https://component.awwhitedevs.com"
+            href="https://component.aewhitedevs.com"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 px-2.5 py-1 rounded bg-[#c5c0ff]/10 text-[#c5c0ff] border border-[#c5c0ff]/30 text-[11px] font-mono-tech"
@@ -124,13 +124,13 @@ export const Navbar: React.FC<NavbarProps> = ({
           ))}
           <div className="pt-2 border-t border-white/10">
             <a
-              href="https://component.awwhitedevs.com"
+              href="https://component.aewhitedevs.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-xs font-mono-tech text-[#c5c0ff] py-1"
             >
               <ShoppingBag className="w-4 h-4" />
-              Visitar Tienda Oficial (component.awwhitedevs.com)
+              Visitar Tienda Oficial (component.aewhitedevs.com)
             </a>
           </div>
         </div>
