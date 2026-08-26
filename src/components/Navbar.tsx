@@ -49,7 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           onClick={() => handleLinkClick('hero')}
           className="flex items-center gap-3 text-left group focus:outline-none"
         >
-          <OriginalCatLogo size={32} glow={true} className="transition-transform group-hover:scale-110" />
+          <OriginalCatLogo size={52} glow={true} className="transition-transform group-hover:scale-110" />
           <span className="font-bold text-[24px] text-[#c5c0ff] tracking-tighter leading-none">
             mycatproject
           </span>

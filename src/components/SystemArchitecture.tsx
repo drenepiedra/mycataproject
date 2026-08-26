@@ -56,15 +56,12 @@ export const SystemArchitecture: React.FC = () => {
           </h2>
 
           <p className="text-[#c8c4d5] text-base sm:text-lg mb-4 leading-relaxed font-normal">
-            Somos un equipo especializado de ingenieros de hardware, desarrolladores de software y apasionados de la innovación tecnológica. Nuestro objetivo principal es transformar ideas complejas en soluciones prácticas, confiables y de vanguardia.
+            Somos un equipo especializado de ingenieros , desarrolladores de software y apasionados de la innovación tecnológica. Nuestro objetivo principal es transformar ideas complejas en soluciones prácticas, confiables y de vanguardia.
           </p>
 
-          <p className="text-[#c8c4d5] text-base sm:text-lg leading-relaxed font-normal mb-4">
-            Combinamos una sólida base en electrónica, sistemas embebidos de bajo consumo, automatización y desarrollo cloud para ofrecer productos y servicios que marcan la diferencia en el mercado actual.
-          </p>
 
           <p className="text-[#c8c4d5] text-base sm:text-lg leading-relaxed font-normal">
-            Creemos firmemente en el código limpio, el hardware robusto y las relaciones duraderas con nuestros clientes y colaboradores.
+            Creemos firmemente en el código limpio,  las relaciones duraderas con nuestros clientes y colaboradores.
           </p>
 
           {/* Interactive Desplegable con razones convincentes para elegirnos */}
