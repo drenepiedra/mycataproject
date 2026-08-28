@@ -196,7 +196,7 @@ export const CommunitySection: React.FC = () => {
               rel="noopener noreferrer"
               className="w-full py-2.5 px-3 bg-[#c5c0ff] text-[#281590] rounded text-xs font-mono-tech font-semibold uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center gap-2 text-center"
             >
-              <span className="">https://drenepiedra.github.io/AcademyLearn/</span>
+              <span className="">drenepiedra.github.io/AcademyLearn/</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
 
