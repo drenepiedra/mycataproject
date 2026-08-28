@@ -41,73 +41,71 @@ export const CommunitySection: React.FC = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Card 1: Contacto Principal con Correo Destacado */}
-        <div className="bg-[#1b1b1d] border border-[#c5c0ff]/30 rounded-lg p-6 sm:p-8 cyber-glow flex flex-col justify-between lg:col-span-2 relative overflow-hidden">
-          <div className="relative z-10">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded bg-[#201f21] border border-[#c5c0ff]/30 flex items-center justify-center text-[#c5c0ff]">
+        <div className="bg-[#1b1b1d] border border-[#c5c0ff]/30 rounded-lg p-6 sm:p-8 cyber-glow flex flex-col lg:col-span-2 relative overflow-hidden">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded bg-[#201f21] border border-[#c5c0ff]/30 flex items-center justify-center text-[#c5c0ff]">
+              <Mail className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="font-mono-tech text-xs text-[#c5c0ff] uppercase tracking-wider block">
+                Canal de Contacto Oficial
+              </span>
+              <h3 className="font-semibold text-xl text-[#e5e1e4]">
+                Escríbenos Directamente
+              </h3>
+            </div>
+          </div>
+
+          <p className="text-sm text-[#c8c4d5] leading-relaxed mb-6 font-normal">
+            ¿Tienes una idea de hardware, necesitas asesoría técnica o quieres colaborar en un desarrollo? Estamos a tu disposición para responder cualquier consulta.
+          </p>
+
+          {/* Email Box Highlighted */}
+          <div className="bg-[#131315] border border-white/10 rounded-lg p-4 mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="p-2 rounded bg-[#c5c0ff]/10 text-[#c5c0ff] shrink-0">
                 <Mail className="w-5 h-5" />
               </div>
-              <div>
-                <span className="font-mono-tech text-xs text-[#c5c0ff] uppercase tracking-wider block">
-                  Canal de Contacto Oficial
+              <div className="text-left min-w-0">
+                <span className="text-[11px] font-mono-tech text-[#928f9e] uppercase block">
+                  Correo electrónico
                 </span>
-                <h3 className="font-semibold text-xl text-[#e5e1e4]">
-                  Escríbenos Directamente
-                </h3>
+                <a
+                  href={`mailto:${myEmail}`}
+                  className="text-sm sm:text-base font-mono-tech font-bold text-[#c5c0ff] hover:underline break-all"
+                >
+                  {myEmail}
+                </a>
               </div>
             </div>
 
-            <p className="text-sm text-[#c8c4d5] leading-relaxed mb-6 font-normal">
-              ¿Tienes una idea de hardware, necesitas asesoría técnica o quieres colaborar en un desarrollo? Estamos a tu disposición para responder cualquier consulta.
-            </p>
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                id="copy-email-btn"
+                onClick={handleCopyEmail}
+                className="px-3 py-2 rounded bg-[#201f21] hover:bg-[#2c2b2e] border border-white/10 text-xs font-mono-tech text-[#c8c4d5] hover:text-[#c5c0ff] transition-all flex items-center gap-1.5"
+                title="Copiar correo al portapapeles"
+              >
+                {copied ? (
+                  <>
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span className="text-emerald-400">¡Copiado!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-3.5 h-3.5" />
+                    <span>Copiar</span>
+                  </>
+                )}
+              </button>
 
-            {/* Email Box Highlighted */}
-            <div className="bg-[#131315] border border-white/10 rounded-lg p-4 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-3 w-full sm:w-auto">
-                <div className="p-2 rounded bg-[#c5c0ff]/10 text-[#c5c0ff]">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div className="text-left overflow-hidden">
-                  <span className="text-[11px] font-mono-tech text-[#928f9e] uppercase block">
-                    Correo electrónico
-                  </span>
-                  <a
-                    href={`mailto:${myEmail}`}
-                    className="text-base sm:text-lg font-mono-tech font-bold text-[#c5c0ff] hover:underline break-all"
-                  >
-                    {myEmail}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
-                <button
-                  id="copy-email-btn"
-                  onClick={handleCopyEmail}
-                  className="px-3 py-2 rounded bg-[#201f21] hover:bg-[#2c2b2e] border border-white/10 text-xs font-mono-tech text-[#c8c4d5] hover:text-[#c5c0ff] transition-all flex items-center gap-1.5"
-                  title="Copiar correo al portapapeles"
-                >
-                  {copied ? (
-                    <>
-                      <Check className="w-3.5 h-3.5 text-emerald-400" />
-                      <span className="text-emerald-400">¡Copiado!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-3.5 h-3.5" />
-                      <span>Copiar</span>
-                    </>
-                  )}
-                </button>
-
-                <a
-                  href={`mailto:${myEmail}`}
-                  className="px-4 py-2 rounded bg-[#c5c0ff] text-[#281590] text-xs font-mono-tech font-semibold hover:brightness-110 transition-all flex items-center gap-1.5"
-                >
-                  <span>Enviar Email</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              </div>
+              <a
+                href={`mailto:${myEmail}`}
+                className="px-4 py-2 rounded bg-[#c5c0ff] text-[#281590] text-xs font-mono-tech font-semibold hover:brightness-110 transition-all flex items-center gap-1.5"
+              >
+                <span>Enviar Email</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
 
@@ -142,10 +140,10 @@ export const CommunitySection: React.FC = () => {
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               className="w-full bg-[#131315] border border-white/10 focus:border-[#c5c0ff] rounded px-3 py-2 text-xs text-[#e5e1e4] font-mono-tech outline-none transition-all resize-none"
             />
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               {messageSent ? (
                 <span className="text-xs font-mono-tech text-emerald-400 flex items-center gap-1">
-                  <Check className="w-3.5 h-3.5" /> ¡Mensaje enviado con éxito! Te responderemos a la brevedad.
+                  <Check className="w-3.5 h-3.5 shrink-0" /> ¡Mensaje enviado con éxito!
                 </span>
               ) : (
                 <span className="text-[11px] font-mono-tech text-[#928f9e]">
@@ -154,7 +152,7 @@ export const CommunitySection: React.FC = () => {
               )}
               <button
                 type="submit"
-                className="px-5 py-2 bg-[#c5c0ff]/20 hover:bg-[#c5c0ff]/30 text-[#c5c0ff] border border-[#c5c0ff]/40 rounded text-xs font-mono-tech uppercase tracking-wider transition-all flex items-center gap-1.5"
+                className="px-5 py-2 bg-[#c5c0ff]/20 hover:bg-[#c5c0ff]/30 text-[#c5c0ff] border border-[#c5c0ff]/40 rounded text-xs font-mono-tech uppercase tracking-wider transition-all flex items-center gap-1.5 shrink-0"
               >
                 <Send className="w-3 h-3" />
                 <span>Enviar Mensaje</span>
@@ -176,7 +174,7 @@ export const CommunitySection: React.FC = () => {
               2. Academia de Desarrollo
             </h3>
             <p className="text-xs text-[#c8c4d5] leading-relaxed mb-4">
-              Visita nuestra tienda y academia  para adquirir componentes de hardware y , componentes para prototipos y sensores certificados.
+              Visita nuestra tienda y academia para adquirir componentes de hardware, componentes para prototipos y sensores certificados.
             </p>
           </div>
 
@@ -185,19 +183,19 @@ export const CommunitySection: React.FC = () => {
               href="https://component.aewhitedevs.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-2.5 px-3 bg-[#c5c0ff] text-[#281590] rounded text-xs font-mono-tech font-semibold uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center gap-2 text-center"
+              className="w-full py-2.5 px-3 bg-[#c5c0ff] text-[#281590] rounded text-xs font-mono-tech font-semibold uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center gap-2 min-w-0"
             >
-              <span>component.aewhitedevs.com</span>
-              <ExternalLink className="w-3.5 h-3.5" />
+              <span className="truncate">component.aewhitedevs.com</span>
+              <ExternalLink className="w-3.5 h-3.5 shrink-0" />
             </a>
             <a
               href="https://drenepiedra.github.io/AcademyLearn/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-2.5 px-3 bg-[#c5c0ff] text-[#281590] rounded text-xs font-mono-tech font-semibold uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center gap-2 text-center"
+              className="w-full py-2.5 px-3 bg-[#c5c0ff] text-[#281590] rounded text-xs font-mono-tech font-semibold uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center gap-2 min-w-0"
             >
-              <span className="">drenepiedra.github.io/AcademyLearn/</span>
-              <ExternalLink className="w-3.5 h-3.5" />
+              <span className="truncate">drenepiedra.github.io/AcademyLearn/</span>
+              <ExternalLink className="w-3.5 h-3.5 shrink-0" />
             </a>
 
             <div className="p-3 rounded bg-[#131315] border border-white/5 text-xs text-[#c8c4d5] space-y-1">

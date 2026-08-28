@@ -13,24 +13,24 @@ export const ActiveDeployments: React.FC = () => {
         </p>
       </div>
 
-      <div className="max-w-4xl flex gap-8 mx-auto">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         <div
           id="store-deployment-card"
           className="bg-[#201f21] border border-white/15 rounded-lg p-6 sm:p-8 cyber-glow flex flex-col group hover:border-[#c5c0ff]/60 transition-all duration-300 relative overflow-hidden"
 >
           {/* Header Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-            <div className="flex items-center gap-2">
-              <span className="px-2.5 py-1 font-mono-tech text-[11px] uppercase rounded-[3px] tracking-wider bg-[#c5c0ff]/20 text-[#c5c0ff] border border-[#c5c0ff]/40">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="px-2.5 py-1 font-mono-tech text-[11px] uppercase rounded-[3px] tracking-wider bg-[#c5c0ff]/20 text-[#c5c0ff] border border-[#c5c0ff]/40 whitespace-nowrap">
                 Tienda Oficial
               </span>
-              <span className="px-2.5 py-1 font-mono-tech text-[11px] uppercase rounded-[3px] tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
+              <span className="px-2.5 py-1 font-mono-tech text-[11px] uppercase rounded-[3px] tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5 whitespace-nowrap">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                 ONLINE EN VIVO
               </span>
             </div>
 
-            <span className="text-xs font-mono-tech text-[#928f9e]">
+            <span className="text-xs font-mono-tech text-[#928f9e] break-all">
               component.aewhitedevs.com
             </span>
           </div>
@@ -45,7 +45,7 @@ export const ActiveDeployments: React.FC = () => {
                 <h4 className="font-semibold text-lg text-[#e5e1e4]">
                  MyCatStore
                 </h4>
-                <p className="text-xs font-mono-tech text-[#c5c0ff]">
+                <p className="text-xs font-mono-tech text-[#c5c0ff] break-all">
                   https://component.aewhitedevs.com
                 </p>
               </div>
@@ -56,38 +56,38 @@ export const ActiveDeployments: React.FC = () => {
           </div>
 
           {/* Title & Description */}
-          <h3 className="font-semibold text-2xl text-[#e5e1e4] mb-3 group-hover:text-[#c5c0ff] transition-colors">
+          <h3 className="font-semibold text-xl sm:text-2xl text-[#e5e1e4] mb-3 group-hover:text-[#c5c0ff] transition-colors">
             Tienda Oficial de Componentes y Hardware
           </h3>
 
-          <p className="text-base text-[#c8c4d5] leading-relaxed mb-6 font-normal">
-            Explora nuestro catálogo en línea con productos de calidad , tenemos los mejores coponentes del mercado y los mejores precios par usted.
+          <p className="text-sm sm:text-base text-[#c8c4d5] leading-relaxed mb-6 font-normal">
+            Explora nuestro catálogo en línea con productos de calidad, tenemos los mejores componentes del mercado y los mejores precios para usted.
           </p>
 
           {/* Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 font-mono-tech text-xs text-[#c8c4d5]">
-            <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5">
+            <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5 min-w-0">
               <CheckCircle2 className="w-4 h-4 text-[#c5c0ff] shrink-0" />
-              <span>Stock verificado </span>
+              <span>Stock verificado</span>
             </div>
-            <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5">
+            <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5 min-w-0">
               <CheckCircle2 className="w-4 h-4 text-[#c5c0ff] shrink-0" />
               <span>Soporte directo atención personalizada</span>
             </div>
-            <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5">
+            <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5 min-w-0">
               <CheckCircle2 className="w-4 h-4 text-[#c5c0ff] shrink-0" />
               <span>Garantía de calidad en hardware</span>
             </div>
-            <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5">
+            <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5 min-w-0">
               <CheckCircle2 className="w-4 h-4 text-[#c5c0ff] shrink-0" />
-              <span>Envíos rápidos </span>
+              <span>Envíos rápidos</span>
             </div>
           </div>
 
           {/* Action CTA */}
-          <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-xs font-mono-tech text-[#928f9e]">
-              <Cpu className="w-4 h-4 text-[#c5c0ff]" />
+          <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-center gap-2 text-xs font-mono-tech text-[#928f9e] min-w-0">
+              <Cpu className="w-4 h-4 text-[#c5c0ff] shrink-0" />
               <span>Integración directa con nuestro ecosistema</span>
             </div>
 
@@ -108,18 +108,18 @@ export const ActiveDeployments: React.FC = () => {
   className="bg-[#201f21] border border-white/15 rounded-lg p-6 sm:p-8 cyber-glow flex flex-col group hover:border-[#c5c0ff]/60 transition-all duration-300 relative overflow-hidden"
 >
   {/* Header Bar */}
-  <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-    <div className="flex items-center gap-2">
-      <span className="px-2.5 py-1 font-mono-tech text-[11px] uppercase rounded-[3px] tracking-wider bg-[#c5c0ff]/20 text-[#c5c0ff] border border-[#c5c0ff]/40">
+  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6">
+    <div className="flex flex-wrap items-center gap-2">
+      <span className="px-2.5 py-1 font-mono-tech text-[11px] uppercase rounded-[3px] tracking-wider bg-[#c5c0ff]/20 text-[#c5c0ff] border border-[#c5c0ff]/40 whitespace-nowrap">
         Academia Digital
       </span>
-      <span className="px-2.5 py-1 font-mono-tech text-[11px] uppercase rounded-[3px] tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
+      <span className="px-2.5 py-1 font-mono-tech text-[11px] uppercase rounded-[3px] tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5 whitespace-nowrap">
         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         ACCESO LIBRE
       </span>
     </div>
 
-    <span className="text-xs font-mono-tech text-[#928f9e]">
+    <span className="text-xs font-mono-tech text-[#928f9e] break-all">
       drenepiedra.github.io
     </span>
   </div>
@@ -134,7 +134,7 @@ export const ActiveDeployments: React.FC = () => {
         <h4 className="font-semibold text-lg text-[#e5e1e4]">
           AcademyLearn
         </h4>
-        <p className="text-xs font-mono-tech text-[#c5c0ff]">
+        <p className="text-xs font-mono-tech text-[#c5c0ff] break-all">
           drenepiedra.github.io/AcademyLearn
         </p>
       </div>
@@ -145,38 +145,38 @@ export const ActiveDeployments: React.FC = () => {
   </div>
 
   {/* Title & Description */}
-  <h3 className="font-semibold text-2xl text-[#e5e1e4] mb-3 group-hover:text-[#c5c0ff] transition-colors">
+  <h3 className="font-semibold text-xl sm:text-2xl text-[#e5e1e4] mb-3 group-hover:text-[#c5c0ff] transition-colors">
     Academia de Aprendizaje y Desarrollo
   </h3>
 
-  <p className="text-base text-[#c8c4d5] leading-relaxed mb-6 font-normal">
+  <p className="text-sm sm:text-base text-[#c8c4d5] leading-relaxed mb-6 font-normal">
     Accede a recursos educativos estructurados, guías prácticas y documentación técnica diseñada para potenciar tus habilidades y llevar tu conocimiento al siguiente nivel.
   </p>
 
   {/* Highlights */}
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 font-mono-tech text-xs text-[#c8c4d5]">
-    <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5">
+    <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5 min-w-0">
       <BookOpen className="w-4 h-4 text-[#c5c0ff] shrink-0" />
       <span>Contenido estructurado y progresivo</span>
     </div>
-    <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5">
+    <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5 min-w-0">
       <Clock className="w-4 h-4 text-[#c5c0ff] shrink-0" />
       <span>Acceso 24/7 a todos los materiales</span>
     </div>
-    <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5">
+    <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5 min-w-0">
       <Code className="w-4 h-4 text-[#c5c0ff] shrink-0" />
       <span>Recursos prácticos y ejemplos reales</span>
     </div>
-    <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5">
+    <div className="flex items-center gap-2 bg-[#131315]/80 p-2.5 rounded border border-white/5 min-w-0">
       <Award className="w-4 h-4 text-[#c5c0ff] shrink-0" />
       <span>Aprendizaje a tu propio ritmo</span>
     </div>
   </div>
 
   {/* Action CTA */}
-  <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-    <div className="flex items-center gap-2 text-xs font-mono-tech text-[#928f9e]">
-      <Github className="w-4 h-4 text-[#c5c0ff]" />
+  <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <div className="flex items-center gap-2 text-xs font-mono-tech text-[#928f9e] min-w-0">
+      <Github className="w-4 h-4 text-[#c5c0ff] shrink-0" />
       <span>Alojado en GitHub Pages</span>
     </div>
 

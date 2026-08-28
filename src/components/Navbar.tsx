@@ -42,15 +42,15 @@ export const Navbar: React.FC<NavbarProps> = ({
           : 'bg-[#131315]/80 backdrop-blur-md border-b border-white/10'
       }`}
     >
-      <div className="flex justify-between items-center px-6 py-4 max-w-6xl mx-auto">
+      <div className="flex justify-between items-center px-4 sm:px-6 py-3 sm:py-4 max-w-6xl mx-auto">
         {/* Brand */}
         <button
           id="nav-brand-btn"
           onClick={() => handleLinkClick('hero')}
-          className="flex items-center gap-3 text-left group focus:outline-none"
+          className="flex items-center gap-2 sm:gap-3 text-left group focus:outline-none min-w-0"
         >
-          <OriginalCatLogo size={52} glow={true} className="transition-transform group-hover:scale-110" />
-          <span className="font-bold text-[24px] text-[#c5c0ff] tracking-tighter leading-none">
+          <OriginalCatLogo size={48} glow={true} className="transition-transform group-hover:scale-110 shrink-0" />
+          <span className="font-bold text-[18px] sm:text-[24px] text-[#c5c0ff] tracking-tighter leading-none truncate">
             mycatproject
           </span>
         </button>
@@ -88,12 +88,12 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Mobile menu trigger */}
-        <div className="md:hidden flex items-center gap-3">
+        <div className="md:hidden flex items-center gap-4">
           <a
             href="https://component.aewhitedevs.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 px-2.5 py-1 rounded bg-[#c5c0ff]/10 text-[#c5c0ff] border border-[#c5c0ff]/30 text-[11px] font-mono-tech"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#c5c0ff]/10 text-[#c5c0ff] border border-[#c5c0ff]/30 text-[11px] font-mono-tech"
           >
             <ShoppingBag className="w-3 h-3" />
             <span>Tienda</span>
